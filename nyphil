@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 ## 
-## Usage: ./download <document-id> <#-pages-to-download> <resolution> 
+## Usage: ./nyphil <document-id> <#-pages-to-download> <resolution> 
 ##
 ## <document-id>:		Four digit number. Ex. 1786.
 ## <#-pages-to-download>:	number of pages to download. Ex. 20.
