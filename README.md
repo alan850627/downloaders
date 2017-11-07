@@ -6,7 +6,7 @@ npm and Node.js
 ## Setup
 ```Bash
 git clone https://github.com/alan850627/downloaders.git
-cd downloaders
+cd downloaders/
 npm install
 ```
 
