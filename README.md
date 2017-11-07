@@ -1,7 +1,7 @@
 # Downloaders
 
 ## Requirements
-Basic Bash. On windows, you can use Cygwin and get `base` and `wget`. Scrips should just work on mac and linux.
+Node.js
 
 ## nyphil
 Downloads nyphil archive scores. 
@@ -25,3 +25,16 @@ Arguments:
 * #-pages-to-download: Self explanatory. The program will start from page 1 and download every page until this number.
 
 * resolution: There are three resolutions: 1200, 2000, or 3000, with 3000 being the highest resolution. If a number is not provided, the program will default to 3000.
+
+## culture.ru
+Downloads culture.ru scores.
+
+Usage:
+```Bash
+node culture.ru.js <link> <dir>
+```
+
+Arguments:
+* link: The document link. The downloader will get the html and find the image files to download.
+
+* dir: Directory to save your downloaded images. Defaults to `./downloaded` if none provided.
