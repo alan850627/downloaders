@@ -18,6 +18,7 @@ function parse(input) {
 	var re=/defaultUrl":"attachment\/original\/[A-Za-z0-9]+?-original.jpeg/g
 	/* putting matches into an array */
 	i = 0
+	arr=[]
 	do {
 		m = re.exec(input);
 		if (m) {
