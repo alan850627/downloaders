@@ -14,14 +14,14 @@ function iterate() {
 }
 
 function parse(input) {
-	var re=/https:\/\/b1.culture.ru\/c\/\d+.jpg/g
-
+	input = (/console\.log.*/g).exec(input)[0]
+	var re=/defaultUrl":"attachment\/original\/[A-Za-z0-9]+?-original.jpeg/g
 	/* putting matches into an array */
 	i = 0
 	do {
 		m = re.exec(input);
 		if (m) {
-			arr[i] = m[0];
+			arr[i] = `https://www.culture.ru/catalog/tchaikovsky/attachments/${m[0].substring(13)}`;
 			i += 1
 		}
 	} while (m);
