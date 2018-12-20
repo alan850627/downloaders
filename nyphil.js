@@ -7,7 +7,7 @@ var sampleURL;
 /* Helper Functions */
 function parse(input) {
 	var re1=/<img src=".+" height="242px" border="0" alt="Document Image" \/>/g
-	var re2=/http:.+\/\d+/g
+	var re2=/https:.+\/\d+/g
 	/* Up the quality to 3000 */
 	sampleURL = re2.exec(re1.exec(input))[0].replace(/\/\d+/, '/3000')
 	/* begin download */
