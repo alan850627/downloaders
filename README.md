@@ -10,10 +10,27 @@ cd downloaders/
 npm install
 ```
 
+To use the join command in the frontera library downloader, you must have FFMPEG available in your PATH.
+
 See below for download usage.
 
+## frontera
+Downloads audio from the Frontera library.
+
+Usage:
+```Bash
+node frontera.js <link> <dir>
+```
+
+Arguments:
+* link: The document link. For example, http://frontera.library.ucla.edu/recordings/la-negra-48
+
+* dir: Directory to save your downloaded images. Defaults to `./downloads` if none provided.
+
+Note: the downloader creates a .tmp folder in the download directory, then delets it once all processing is done.
+
 ## nyphil
-Downloads nyphil archive scores. 
+Downloads nyphil archive scores.
 
 Usage:
 ```Bash
