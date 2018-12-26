@@ -13,8 +13,11 @@ function getPlaylist(input) {
   /* Also get the track name */
   let re0=/"page-title">.+?Frontera Project/
   let re1=/.+?\|/
-  outFileName = re0.exec(input)[0].replace(/"page-title">/, '').replace('| Frontera Project', '').replace('/', '.').trim() + '.mp3';
-
+  let rawName = re0.exec(input)[0]
+    .replace(/"page-title">/, '')
+    .replace('| Frontera Project', '')
+    .replace('/', '.').trim();
+  outFileName = (rawName.length > 50 ? rawName.substring(0, 50) : rawName) + '.mp3';
   let re2=/playlist_source.+?playlist.m3u8"/
   let re3=/https:.+mp3/
   /* Up the quality to 3000 */
