@@ -53,8 +53,8 @@ update_url () {
   FILE_TILE="$FOLDER/$(printf "%02d" $LEVEL)-$(printf "%02d" $Y)-$(printf "%02d" $X).jpg"
   LOOP=false
 
-  if [[ "$X" -lt "$X_LIMIT" ]] && [[ "$Y" -lt "$Y_LIMIT" ]] && [[ "$PAGE" -lt $((PAGE_START+PAGE_COUNT)) ]]; then
-    LOOP=true
+  if [[ ! -z "$PAGE_COUNT" ]] && [[ "$PAGE" -ge $((PAGE_START+PAGE_COUNT)) ]]; then
+    LOOP=false
     return 0
   fi
 
@@ -70,8 +70,10 @@ update_url () {
 }
 
 [[ -z "$LEVEL" ]] && LEVEL=3
+[[ -z "$OUT" ]] && OUT='.'
 if [[ -z "$PAGE_START" ]]; then
   PAGE=1
+  PAGE_START=1
 else
   PAGE=$PAGE_START
 fi

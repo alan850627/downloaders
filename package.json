@@ -18,7 +18,9 @@
   "homepage": "https://github.com/alan850627/downloaders#readme",
   "dependencies": {
     "ffmpeg": "0.0.4",
+    "node-fetch": "^2.6.0",
     "request": "^2.83.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "yargs": "^15.3.1"
   }
 }
